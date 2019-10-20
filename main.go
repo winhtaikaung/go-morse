@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(morse.Encode("The quick brown fox jumps over 13 lazy dogs"))
+	fmt.Println(morse.Encode(".,?'!/()&:;=+-_\"$@"))
 
-	fmt.Println(morse.Decode("- .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- / .--- ..- -- .--. ... / --- ...- . .-. / .---- ...-- / .-.. .- --.. -.-- / -.. --- --. ... "))
+	fmt.Println(morse.Decode(morse.Encode(".,?'!/()&:;=+-_\"$@")))
 }
