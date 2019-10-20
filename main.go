@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(morse.Encode("hello world"))
-	fmt.Println(morse.Decode(morse.Encode(".,?'!/()&:;=+-_\"$@")))
+	fmt.Println(morse.Encode("The quick brown fox jumps over 13 lazy dogs.", " ", "*"))
+	fmt.Println(morse.Decode("- .... . * --.- ..- .. -.-. -.- * -... .-. --- .-- -. * ..-. --- -..- * .--- ..- -- .--. ... * --- ...- . .-. * .---- ...-- * .-.. .- --.. -.-- * -.. --- --. ... .-.-.-", " ", "*"))
 }
