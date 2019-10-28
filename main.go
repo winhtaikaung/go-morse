@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	fmt.Println(morse.Encode(".,?'!/()&:;=+-_\"$@"))
-
+	fmt.Println(morse.Encode("hello world"))
 	fmt.Println(morse.Decode(morse.Encode(".,?'!/()&:;=+-_\"$@")))
 }
