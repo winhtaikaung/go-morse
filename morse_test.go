@@ -5,11 +5,11 @@ import (
 	"testing"
 )
 
-const RAW_STRING = string("hello world")
-const ENCODED_STRING = string("....  .  .-..  .-..  ---  /  .--  ---  .-.  .-..  -.. ")
+const RAW_STRING = string("the quick brown fox jumps over 13 lazy dogs.")
+const ENCODED_STRING = string("- .... . * --.- ..- .. -.-. -.- * -... .-. --- .-- -. * ..-. --- -..- * .--- ..- -- .--. ... * --- ...- . .-. * .---- ...-- * .-.. .- --.. -.-- * -.. --- --. ... .-.-.-")
 
 func TestEncode(t *testing.T) {
-	if morse.Encode(RAW_STRING) != ENCODED_STRING {
+	if morse.Encode(RAW_STRING, " ", "*") != ENCODED_STRING {
 		t.Log("Should match with morse Encoded string Fail")
 		t.Fail()
 	}
@@ -17,7 +17,7 @@ func TestEncode(t *testing.T) {
 }
 
 func TestDecode(t *testing.T) {
-	if morse.Decode(ENCODED_STRING) != RAW_STRING {
+	if morse.Decode(ENCODED_STRING, " ", "*") != RAW_STRING {
 		t.Log("Should match with morse Decoded string Fail")
 		t.Fail()
 	}
